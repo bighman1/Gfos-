@@ -61,22 +61,20 @@ const TABS = [
 ];
 
 // ── Claude API call ─────────────────────────────────────────────
+const GFOS_API = "https://your-backend.up.railway.app"; // ← paste your Railway URL here
+
 async function analyzeWithClaude(prompt, context) {
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch(`${GFOS_API}/v1/intelligence/analyse`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 1000,
-      system: `You are the GFOS Intelligence Engine — the AI analysis layer of the Global Financial Operating System. 
-You analyse real-time payment rail data across banking, remittance apps, mobile money, and crypto networks.
-You provide sharp, concise financial intelligence — like a Bloomberg analyst who also understands emerging market mobile money and crypto rails.
-Keep responses under 200 words. Use specific numbers. Be direct. No fluff. Format with short paragraphs or bullet points.`,
-      messages: [{ role: "user", content: `${prompt}\n\nData: ${JSON.stringify(context, null, 2)}` }],
+      prompt,
+      context,
+      include_live_data: true,
     }),
   });
   const data = await response.json();
-  return data.content?.[0]?.text || "Analysis unavailable.";
+  return data.analysis || "Analysis unavailable.";
 }
 
 // ── Rail Flow Diagram ───────────────────────────────────────────
