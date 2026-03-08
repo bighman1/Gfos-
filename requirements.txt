@@ -1,0 +1,36 @@
+# GFOS — Python Dependencies
+
+# API framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# HTTP client
+httpx>=0.26.0
+
+# Database
+psycopg2-binary>=2.9.9
+sqlalchemy>=2.0.0
+neo4j>=5.15.0
+
+# Graph algorithms
+networkx>=3.2
+
+# Streaming
+kafka-python>=2.0.2
+redis>=5.0.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.26.0
+
+# ML (AI Route Engine)
+scikit-learn>=1.4.0
+# tensorflow>=2.15.0  # optional — uncomment for AI engine
+
+# Scheduling
+apscheduler>=3.10.0
+
+# Utils
+python-dotenv>=1.0.0
+structlog>=24.0.0
