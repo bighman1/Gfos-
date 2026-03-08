@@ -1,0 +1,121 @@
+Here are the full details from your README-1.md file:
+
+🌍 GFOS — Global Financial Operating System
+
+"One dashboard. Every financial rail on earth."
+From SWIFT wire transfers to M-Pesa to Bitcoin — see where money is moving, across all of them, at once.
+
+🔎 What is GFOS?
+
+GFOS is an open-source financial intelligence platform that unifies observation across every layer of the global financial system into a single dashboard. It does not move money — it watches where money moves, across all rail types simultaneously.
+
+🚨 The Problem It Solves
+
+The global financial system moves $190 trillion annually across 4 separate, siloed worlds:
+
+| World | Examples | Current Intelligence |
+|---|---|---|
+| Banking Rails | SWIFT, ACH, SEPA, Fedwire, CHAPS, CIPS | Bloomberg (expensive, siloed) |
+| Remittance Apps | Wise, Western Union, Remitly, WorldRemit | None — completely dark |
+| Mobile Money | M-Pesa, MTN MoMo, Wave, Airtel | None — completely dark |
+| Crypto Networks | USDC/Solana, USDT/TRON, Stellar, Bitcoin | Chainalysis (crypto-only) |
+
+GFOS collapses all four into one system.
+
+🧩 Core Intelligence Modules
+
+| Module | What It Observes | Status |
+|---|---|---|
+| Banking Rail Monitor | SWIFT corridors, ACH volumes, wire signals | 🔨 Building |
+| Remittance App Tracker | Volume trends, corridor share, fees | 🔨 Building |
+| Mobile Money Monitor | Network flows, corridor dominance, seasonal patterns | 🔨 Building |
+| Crypto Flow Intelligence | On-chain volume, stablecoin flows, congestion | 🔨 Building |
+| FX Signal Engine | Cross-rail FX pressure, spreads, arbitrage | 🔨 Building |
+| Congestion Detector | Bottlenecks across all rail types | 🔨 Building |
+| Liquidity Heatmap | Global liquidity concentration | 🔨 Building |
+| Corridor Intelligence | Dominant rail per corridor | 🔨 Building |
+| AI Pattern Engine | Predict rail shifts before they happen | 📋 Planned |
+| Regulation Pulse | Policy changes, capital controls | 📋 Planned |
+| Unified Dashboard | One screen — every rail, every signal | 📋 Planned |
+
+🚀 Quick Start
+
+git clone https://github.com/your-org/gfos.git
+cd gfos
+pip install -r requirements.txt
+uvicorn backend.api.main:app --reload
+
+Query a corridor
+curl "http://localhost:8000/v1/corridors/KE-DE/intelligence"
+
+Compare all rails
+curl "http://localhost:8000/v1/corridors/KE-DE/rails/compare"
+
+Global heatmap
+curl "http://localhost:8000/v1/heatmap/snapshot"
+
+Which rails are surging?
+curl "http://localhost:8000/v1/rails/surging?threshold=0.15"
+
+💻 SDK Usage
+
+Python and TypeScript SDKs are provided, supporting:
+- Corridor intelligence (cross-rail dominant flow, volume trends, rail breakdowns)
+- Side-by-side rail comparison (volume index, fee index, speed)
+- Surging rail detection across all categories
+- Banking/crypto/mobile rail signal queries
+- Live streaming of all rails via WebSocket
+
+🗺️ Full Rail Coverage
+
+🏦 Banking Rails
+SWIFT, SEPA/SEPA Instant, ACH, Fedwire, CHAPS, CIPS, RTGS (80+ countries), IMPS/UPI
+
+💸 Remittance Apps
+Wise, Western Union, Remitly, WorldRemit, Sendwave, MoneyGram, Paysend
+
+📱 Mobile Money
+M-Pesa, MTN MoMo, Airtel Money, Wave, Orange Money, GCash, bKash, Easypaisa
+
+₿ Crypto Networks
+Solana (USDC), TRON (USDT), Stellar (XLM), Ethereum, Bitcoin, Lightning Network
+
+💹 FX Markets
+170+ live currency pairs, parallel market divergence signals, spread widening indicators
+
+🏗️ Architecture Stack
+
+Data Sources → Data Collectors (Python) → Streaming Layer (Kafka/Redis)
+    → Database Layer (PostgreSQL + Neo4j) → Intelligence Layer
+        → API Layer (FastAPI) → Unified Dashboard (Next.js + Mapbox + D3.js)
+
+👥 Who It's For
+
+- Central Banks & Regulators — unified view of capital flows across all rails
+- Fintechs & Remittance Operators — corridor monitoring and competitor intelligence
+- Impact Investors & Development Finance — emerging market capital flow mapping
+- Trade Finance Desks — early cross-border volume shift signals
+- Hedge Funds & Macro Analysts — machine-readable remittance leading indicators
+- Researchers & Journalists — first open, unified global money flow dataset
+
+📅 Development Roadmap
+
+| Phase | Focus |
+|---|---|
+| Phase 1 ← (Current) | Core Intelligence Engine + Banking Rail Observers |
+| Phase 2 | Remittance + Mobile Money + Crypto Observers |
+| Phase 3 | Cross-Rail Comparison Engine + Corridor Intelligence |
+| Phase 4 | AI Pattern + Forecasting Engine |
+| Phase 5 | Unified Global Dashboard (Mapbox + D3.js) |
+| Phase 6 | Institutional API (subscription tier) |
+
+🤝 Contributing Areas
+
+Banking integrations · Remittance API observers · Mobile money (MTN, Wave, GCash) · Crypto (TRON, Stellar, Lightning) · FX feeds · ML/AI forecasting · Frontend (Next.js, Mapbox, D3.js) · Domain experts
+
+📜 License
+
+MIT — free to use, modify, and build upon.
+
+"Every bank. Every app. Every network. Every rail. One dashboard. One intelligence layer. One picture of where money moves."
+Built for the world. Starting from Africa.
