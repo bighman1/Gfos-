@@ -19,7 +19,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import asyncio
 
-from routers import rails, corridors, heatmap, fx
+from routers import rails, corridors, heatmap, fx, analysis
 from collectors.scheduler import start_scheduler, stop_scheduler
 
 
@@ -52,6 +52,7 @@ app.include_router(rails.router,     prefix="/v1/rails",      tags=["Rails"])
 app.include_router(corridors.router, prefix="/v1/corridors",  tags=["Corridors"])
 app.include_router(heatmap.router,   prefix="/v1/heatmap",    tags=["Heatmap"])
 app.include_router(fx.router,        prefix="/v1/fx",         tags=["FX"])
+app.include_router(analysis.router,  prefix="/v1/intelligence",tags=["Intelligence"])
 
 
 @app.get("/")
